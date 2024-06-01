@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* 导航栏样式 */
+.nav {
+    display: flex;
+    /* 使用flex布局 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: space-between;
+    /* 两端对齐 */
+    padding: 10px;
+    /* 添加内边距来增加可读性 */
+
+    /* 设置背景色 */
+}
+
+.nav div {
+    margin: 0 10px;
+    /* 设置各div之间的间距 */
+}
+
+.btn1,
+.btn2 {
+    background-color: #DD2727;
+    /* 设置按钮背景色 */
+    color: #fff;
+    /* 设置按钮文字颜色 */
+    padding: 5px 10px;
+    /* 设置按钮内边距 */
+    border-radius: 5px;
+    /* 设置按钮圆角 */
+    cursor: pointer;
+    /* 设置鼠标样式为手型 */
+}
+
+.btn1:hover,
+.btn2:hover {
+    background-color: rgb(239, 98, 98);
+    /* 设置按钮鼠标悬停时的背景色 */
+}
+
+/* 头部样式 */
+.header {
+    background-color: #ffffff;
+    /* 设置背景色 */
+    display: flex;
+    /* 使用flex布局 */
+    justify-content: space-between;
+    /* 两端对齐 */
+    align-items: center;
+    /* 垂直居中 */
+    padding: 10px;
+    /* 添加内边距来增加可读性 */
+}
+
+.header div {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    /* 设置内边距 */
+    text-align: center;
+    /* 文字居中 */
+}
+
+.logo1 {
+    background-image: url('./img/logo1.png');
+    background-color: #ffffff;
+    background-size: cover;
+    /* 设置背景图像尺寸 */
+    width: 150px;
+    /* 设置Logo宽度 */
+    height: 60px;
+    /* 设置Logo高度 */
+    margin-left: 200px;
+}
+
+.logo2 {
+    background-image: url('./img/logo2.png');
+    background-size: cover;
+    /* 设置背景图像尺寸 */
+    width: 50px;
+    /* 设置Logo宽度 */
+    height: 60px;
+    /* 设置Logo高度 */
+    margin-right: 200px;
+}
+
+/* 搜索框样式 */
+.search {
+
+    flex: 1;
+    /* 搜索框占据剩余空间 */
+    padding: 10px;
+    /* 设置内边距 */
+    background-color: #ffffff;
+    /* 设置背景色 */
+    border-radius: 20px;
+    /* 设置边框圆角 */
+    outline: none;
+    /* 去掉默认的轮廓样式 */
+    transition: all 0.3s;
+    /* 设置过渡效果 */
+}
+
+
+.search::placeholder {
+
+    color: #999;
+    /* 设置占位符文字颜色 */
+}
+
+.search:hover,
+.search:focus {
+    border-color: #666;
+    /* 设置鼠标悬停和聚焦时的边框颜色 */
+}
+
+.search-input {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1.5px solid #C81623;
+    border-radius: 20px;
+    outline: none;
+    flex: 1;
+    /* 设置搜索框占据更多的剩余空间 */
+    min-width: 600px;
+    /* 设置最小宽度 */
+}
+
+/* 搜索按钮样式 */
+.search-btn {
+    padding: 10px 16px;
+    /* 设置按钮内边距 */
+    background-color: #DD2727;
+    /* 设置按钮背景色 */
+    color: #fff;
+    /* 设置按钮文字颜色 */
+    border: none;
+    /* 去掉边框 */
+    border-radius: 20px;
+    /* 设置按钮圆角 */
+    cursor: pointer;
+    /* 设置鼠标样式为手型 */
+    transition: all 0.3s;
+    /* 设置过渡效果 */
+    font-size: 15px;
+}
+
+.search-btn:hover {
+    background-color: #f49b9b;
+    /* 设置按钮鼠标悬停时的背景色 */
+}
+
+.header .recommend span:first-child {
+    color: #DD2727;
+    /* 设置第一个span为红色 */
+    background-color: #ffffff;
+}
+
+.header .recommend {
+
+    color: #666;
+    display: flex;
+    /* 使用flex布局 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+span {
+    background-color: #ffffff;
+    margin: 0 10px;
+    /* 为每个词语设置左右间隔为10像素 */
+}
+
+/* 中部样式 */
+.menu {
+    display: flex;
+    align-items: stretch;
+    padding: 18px;
+}
+
+.item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 160px;
+    
+}
+
+.item div {
+    background-color: #ffffff;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.advt {
+    background-image: url('./img/advt.png');
+    height: 476px;
+    background-position: center;
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rank {
+    background-color: #ffffff;
+    flex: 1;
+    width: 50px;
+    padding-left: 15px;
+    padding-right: 180px;
+    padding: 0 15px;
+    text-align: center;
+    /* 居中 */
+    font-size: 24px;
+    /* background-color: #ffffff; */
+    /* 字体变大 */
+}
+
+.rank div {
+    background-color: #ffffff;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.rank1 {
+    background-image: url('./img/rank1.png');
+    background-size: cover;
+    /* 设置第二个元素的背景图片 */
+    display: inline-block;
+    height: 60px;
+    width: 259px;
+    /* 设置元素的高度和宽度 */
+    margin-top: 15px;
+    /* 设置元素的上边距 */
+}
+
+.rank2 {
+    background-image: url('./img/rank2.png');        
+    background-size: cover;
+    /* 设置第二个元素的背景图片 */
+    display: inline-block;
+    height: 60px;
+    width: 259px;
+    /* 设置元素的高度和宽度 */
+    margin-top: 15px;
+    /* 设置元素的上边距 */
+}
+
+.rank3 {
+    background-image: url('./img/rank3.png');
+    background-size: cover;
+    /* 设置第三个元素的背景图片 */      
+    display: inline-block;
+    height: 60px;
+    width: 259px;    
+    /* 设置元素的高度和宽度 */    
+    margin-top: 15px;                       
+}
+    
+            
+
+
+
+
+

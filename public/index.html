@@ -1,43 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="zh-CN">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物首页</title>
+    <link rel="stylesheet" href="../src/style.css">
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <div class="nav">
+        <div></div>
+        <div>欢迎购买</div>
+        <div style="flex-grow: 1;"></div>
+        <div>我的订单</div>
+        <div>购物车</div>
+        <div class="btn1">登录</div>
+        <div class="btn2">注册</div>
+        <div></div>
+    </div>
+
+    <div class="header">
+        <div class="logo1"></div>
+        <div>
+            <div class="search">
+                <input type="text" class="search-input" placeholder="请输入商品名称">
+                <button class="search-btn">搜 索</button>
+            </div>
+            <div class="recommend">
+                <span>为您推荐:</span>
+                <span>618活动满减</span>
+                <span>疯狂星期六</span>
+                <span>京东家电</span>
+                <span>京东超市</span>
+                <span>京东金融</span>
+                <span>限时秒杀</span>
+                <span>会员</span> 
+            </div>
+        </div>
+        <div class="logo2"></div>
+    </div>
+
+    <div class="menu">
+        <div class="item">
+            <div>家用电器</div>
+            <div>手机 / 数码 / 电脑</div>
+            <div>家具 / 家居 / 厨具</div>
+            <div>服饰 / 鞋包 / 箱包</div>
+            <div>钟表 / 珠宝/ 眼镜</div>
+            <div>食品 / 酒水/ 生鲜</div>
+            <div>艺术 / 收藏/ 礼品</div>
+            <div>安装 / 维修/ 清洗</div>
+            <div>图书 / 音像 / 电子书</div>
+            <div>农资绿植 / 种植 / 养殖</div>
+            <div>医疗保健 / 美容 / 保健</div>
+            <div>汽车用品 / 汽车服务 / 汽车配件</div>
+            <div>运动户外 / 运动健身 / 运动器材</div>
+        </div>
+        <div class="advt"></div>
+        <div class="rank">
+            <div>今日热销</div>
+            <div class="rank1"></div> 
+            <div class="rank2"></div> 
+            <div class="rank3"></div> 
+        </div>
+    </div>
+  
+    <div class="goods">
+        <div>goods1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+
+    <div class="footer">
+        <div>关于我们</div>
+        <div>联系我们</div>
+        <div>招聘信息</div>
+        <div>友情链接</div>
+    </div>
+
+</body>
+
 </html>
