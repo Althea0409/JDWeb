@@ -461,3 +461,58 @@ td img {
     margin-top: 20px;   
     margin-bottom: 20px;
 }
+
+/* 搜索结果 */
+.search-result {
+    display: flex; /* 使用 flex 布局来呈现搜索结果 */
+    flex-wrap: wrap; /* 实现搜索结果的自动换行 */
+}
+.search-result .item {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+#goods-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin-left: 110px;
+    margin-right: 105px;
+}
+
+.goods {
+    background-color: #ffffff;
+    padding: 3px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    /* 确保 padding 不影响宽度 */
+}
+
+.goods div {
+    padding: 5px 5px;
+    /* 设置内边距 */
+    text-align: center;
+    /* 文字居中 */
+    background-color: #ffffff;
+}
+
+.goods img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.goods .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.goods .price {
+    color: #C81623;
+    font-weight: bold;
+    font-size: 18px;
+}
