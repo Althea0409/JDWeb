@@ -76,7 +76,8 @@ module.exports = {
         "login",
         "register",
         "shopcart",
-        "search"
+        "search",
+        "detail"
     ]
 };
 

@@ -157,6 +157,7 @@
     /* 设置按钮鼠标悬停时的背景色 */
 }
 
+/* 推荐栏样式 */
 .header .recommend span:first-child {
     color: #DD2727;
     /* 设置第一个span为红色 */
@@ -164,7 +165,6 @@
 }
 
 .header .recommend {
-
     color: #666;
     display: flex;
     /* 使用flex布局 */
