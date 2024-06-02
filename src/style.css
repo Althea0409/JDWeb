@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-#login-btn ,
+#login-btn,
 #register-btn {
     background-color: #DD2727;
     /* 设置按钮背景色 */
@@ -358,4 +358,88 @@ span {
     cursor: pointer;
     /* 当鼠标悬停时显示手型光标 */
 
+}
+
+/* 购物车样式 */
+.cartitle {
+    margin: 10px;
+    margin-left: 100px;
+    display: flex;
+    color: #C81623;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cartitle>div {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.cartitle .cart-pic img {
+    width: 30px;
+    height: 30px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+th,
+td {
+
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 8px;
+}
+
+td,
+th {
+    border: 1px solid transparent;
+    border-top: 1px solid #dddddd;
+    /* 只显示上边框 */
+    border-bottom: 1px solid #dddddd;
+    /* 只显示下边框 */
+}
+
+/* 第一行单元格只显示顶部边框 */
+tr:first-child td,
+tr:first-child th {
+    border-top: 1px solid #dddddd;
+}
+
+/* 最后一行单元格只显示底部边框 */
+tr:last-child td,
+tr:last-child th {
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    background-color: #ffffff;
+}
+
+.checkbox-cell {
+    width: 2%;
+}
+
+.name-cell,
+.intro-cell,
+.price-cell,
+.total-cell,
+.action-cell {
+    width: 15%;
+}
+
+.count-cell {
+    width: 1%;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    border: 2px solid #C81623;
+    background-color: #f2f2f2;
+    cursor: pointer;
 }

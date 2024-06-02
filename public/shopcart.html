@@ -38,6 +38,62 @@
         </div>
         <div class="logo2"></div>
     </div>
+
+    <div class="cart">
+        <div class="cartitle">    
+            <div class="cart-pic" >
+                <img src="./pic/cart.png" alt="">
+            </div>
+            <div>我的购物车</div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="checkbox-cell"><input type="checkbox" id="select-all"></th>
+                    <th class="name-cell">商品名称</th>
+                    <th class="intro-cell">商品信息</th>
+                    <th class="price-cell">单价</th>
+                    <th class="count-cell">数量</th>
+                    <th class="total-cell">小计</th>
+                    <th class="action-cell">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 商品列表 -->
+                
+                <tr>
+                    <td><input type="checkbox" class="item-checkbox"></td>
+                    <td>商品1</td>
+                    <td>好吃，值得推荐</td>
+                    <td>$100</td>
+                    <td><input type="number" value="1" class="quantity-input"></td>
+                    <td>$100</td>
+                    <td><button class="delete-btn">移除</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="item-checkbox"></td>
+                    <td>商品2</td>
+                    <td>好吃，值得推荐</td>
+                    <td>$150</td>
+                    <td><input type="number" value="1" class="quantity-input"></td>
+                    <td>$150</td>
+                    <td><button class="delete-btn">移除</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="item-checkbox"></td>
+                    <td>商品3</td>
+                    <td>好吃，值得推荐</td>
+                    <td>$150</td>
+                    <td><input type="number" value="1" class="quantity-input"></td>
+                    <td>$150</td>
+                    <td><button class="delete-btn">移除</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="summary">
+            <!-- 总价和结算按钮 -->
+        </div>
+    </div>
 </body>
 
 </html>
