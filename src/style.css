@@ -14,8 +14,6 @@
     /* 两端对齐 */
     padding: 10px;
     /* 添加内边距来增加可读性 */
-
-    /* 设置背景色 */
 }
 
 .nav div {
@@ -74,7 +72,7 @@
     /* 设置Logo宽度 */
     height: 60px;
     /* 设置Logo高度 */
-    margin-left: 200px;
+    margin-left: 160px;
 }
 
 .logo2 {
@@ -85,7 +83,7 @@
     /* 设置Logo宽度 */
     height: 60px;
     /* 设置Logo高度 */
-    margin-right: 200px;
+    margin-right: 160px;
 }
 
 /* 搜索框样式 */
@@ -126,7 +124,7 @@
     outline: none;
     flex: 1;
     /* 设置搜索框占据更多的剩余空间 */
-    min-width: 600px;
+    min-width: 650px;
     /* 设置最小宽度 */
 }
 
@@ -179,15 +177,15 @@ span {
 .menu {
     display: flex;
     align-items: stretch;
-    padding: 18px;
+    padding: 20px;
+    padding-right: 115px;
+    padding-left: 120px;
 }
 
 .item {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding-left: 160px;
-    
 }
 
 .item div {
@@ -211,21 +209,16 @@ span {
     background-color: #ffffff;
     flex: 1;
     width: 50px;
-    padding-left: 15px;
-    padding-right: 180px;
     padding: 0 15px;
     text-align: center;
-    /* 居中 */
     font-size: 24px;
-    /* background-color: #ffffff; */
-    /* 字体变大 */
 }
 
 .rank div {
     background-color: #ffffff;
     padding: 8px 15px;
     cursor: pointer;
-    transition: all 0.3s;
+    /* transition: all 0.3s; */
 }
 
 .rank1 {
@@ -241,7 +234,7 @@ span {
 }
 
 .rank2 {
-    background-image: url('./img/rank2.png');        
+    background-image: url('./img/rank2.png');
     background-size: cover;
     /* 设置第二个元素的背景图片 */
     display: inline-block;
@@ -255,17 +248,113 @@ span {
 .rank3 {
     background-image: url('./img/rank3.png');
     background-size: cover;
-    /* 设置第三个元素的背景图片 */      
+    /* 设置第三个元素的背景图片 */
     display: inline-block;
     height: 60px;
-    width: 259px;    
-    /* 设置元素的高度和宽度 */    
-    margin-top: 15px;                       
+    width: 259px;
+    /* 设置元素的高度和宽度 */
+    margin-top: 15px;
 }
-    
-            
 
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
 
+/*商品列表样式 */
+/* 商品列表容器样式 */
+#goods-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 
+    gap: 10px;
+    /* 网格间距 */
+    padding: 10px;
+    margin-left: 110px;
+    margin-right: 105px;
+}
 
+/* 商品项样式 */
+.goods {
+    background-color: #ffffff;
+    padding: 1px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    /* 确保 padding 不影响宽度 */
+}
 
+.goods div {
+    padding: 5px 5px;
+    /* 设置内边距 */
+    text-align: center;
+    /* 文字居中 */
+    background-color: #ffffff;
+}
+
+.goods img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.goods .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.goods .price {
+    color: #C81623;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.goods .btn {
+    background-color: #C81623;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.goods .btn:hover {
+    background-color: #9b131c;
+}
+
+/* 底部样式 */
+.footer {
+    background-color: #333;
+    /* 设置背景颜色 */
+    color: #ffffff;
+    /* 设置文本颜色 */
+    padding: 20px 0;
+    /* 设置内边距 */
+    text-align: center;
+    /* 文本居中对齐 */
+}
+
+/* 设置页脚链接样式 */
+.footer div {
+    display: inline-block;
+    /* 将链接元素显示为行内块元素，使其水平排列 */
+    margin: 0 20px;
+    /* 设置链接之间的水平间距 */
+    font-size: 20px;
+    /* 设置字体大小 */
+    background-color: #333;
+}
+
+/* 链接悬停样式 */
+.footer div:hover {
+    color: #ffcc00;
+    /* 设置悬停时的文本颜色 */
+    cursor: pointer;
+    /* 当鼠标悬停时显示手型光标 */
+
+}

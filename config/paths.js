@@ -74,6 +74,8 @@ module.exports = {
     pages: [
         "index",
         "login",
+        "register",
+        "shopcart"
     ]
 };
 
