@@ -1,5 +1,6 @@
 import "./style.css"
 
+//导航栏按钮-跳转页面
 document.getElementById('shopping-cart')!.addEventListener('click', function () {
     window.location.href = 'shopcart.html';
 });
@@ -12,6 +13,10 @@ document.getElementById('register-btn')!.addEventListener('click', function () {
     window.location.href = 'register.html';
 });
 
+//搜索功能
+
+
+//渲染商品列表
 interface Goods {
     imgSrc: string;
     name: string;
@@ -86,13 +91,13 @@ const goods: Goods[] = [
     },
     {
         imgSrc: './pic/14.png',
-        name: '仿真郁金香',
-        price: '￥36.00'
+        name: '小米平板6Pro',
+        price: '￥1429.00'
     },
     {
         imgSrc: './pic/15.png',
-        name: '熊猫玩偶',
-        price: '￥38.00'
+        name: 'KTC电脑显示屏',
+        price: '￥729.00'
     }
 ];
 
@@ -118,5 +123,5 @@ function renderGoods(goods: Goods[]): void {
 
 renderGoods(goods);
 export {
-    renderGoods as default
+    renderGoods as default   // 导出renderGoods函数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 }

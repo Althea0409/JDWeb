@@ -94,7 +94,7 @@
 }
 
 /* 搜索框样式 */
-.search {
+#search {
 
     flex: 1;
     /* 搜索框占据剩余空间 */
@@ -110,18 +110,18 @@
     /* 设置过渡效果 */
 }
 
-.search::placeholder {
+#search::placeholder {
     color: #999;
     /* 设置占位符文字颜色 */
 }
 
-.search:hover,
-.search:focus {
+#search:hover,
+#search:focus {
     border-color: #666;
     /* 设置鼠标悬停和聚焦时的边框颜色 */
 }
 
-.search-input {
+#search-input {
     background-color: #ffffff;
     padding: 10px;
     border: 1.5px solid #C81623;
@@ -134,7 +134,7 @@
 }
 
 /* 搜索按钮样式 */
-.search-btn {
+#search-btn {
     padding: 10px 16px;
     /* 设置按钮内边距 */
     background-color: #DD2727;
@@ -152,7 +152,7 @@
     font-size: 15px;
 }
 
-.search-btn:hover {
+#search-btn:hover {
     background-color: #f49b9b;
     /* 设置按钮鼠标悬停时的背景色 */
 }
