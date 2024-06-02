@@ -1,5 +1,17 @@
 import "./style.css"
 
+document.getElementById('shopping-cart')!.addEventListener('click', function () {
+    window.location.href = 'shopcart.html';
+});
+
+document.getElementById('login-btn')!.addEventListener('click', function () {
+    window.location.href = 'login.html';
+});
+
+document.getElementById('register-btn')!.addEventListener('click', function () {
+    window.location.href = 'register.html';
+});
+
 interface Goods {
     imgSrc: string;
     name: string;
@@ -106,5 +118,5 @@ function renderGoods(goods: Goods[]): void {
 
 renderGoods(goods);
 export {
-    renderGoods as default                                             
+    renderGoods as default
 }

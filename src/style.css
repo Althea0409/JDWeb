@@ -1,3 +1,4 @@
+/* 全局样式 */
 * {
     margin: 0;
     padding: 0;
@@ -21,8 +22,14 @@
     /* 设置各div之间的间距 */
 }
 
-.btn1,
-.btn2 {
+/* 导航栏按钮样式 */
+#shopping-cart,
+#index-btn {
+    cursor: pointer;
+}
+
+#login-btn ,
+#register-btn {
     background-color: #DD2727;
     /* 设置按钮背景色 */
     color: #fff;
@@ -35,8 +42,8 @@
     /* 设置鼠标样式为手型 */
 }
 
-.btn1:hover,
-.btn2:hover {
+#login-btn:hover,
+#register-btn:hover {
     background-color: rgb(239, 98, 98);
     /* 设置按钮鼠标悬停时的背景色 */
 }
@@ -103,9 +110,7 @@
     /* 设置过渡效果 */
 }
 
-
 .search::placeholder {
-
     color: #999;
     /* 设置占位符文字颜色 */
 }
@@ -263,22 +268,18 @@ span {
 }
 
 /*商品列表样式 */
-/* 商品列表容器样式 */
 #goods-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-
     gap: 10px;
-    /* 网格间距 */
     padding: 10px;
     margin-left: 110px;
     margin-right: 105px;
 }
 
-/* 商品项样式 */
 .goods {
     background-color: #ffffff;
-    padding: 1px;
+    padding: 3px;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -352,7 +353,7 @@ span {
 
 /* 链接悬停样式 */
 .footer div:hover {
-    color: #ffcc00;
+    color: #de1b28;
     /* 设置悬停时的文本颜色 */
     cursor: pointer;
     /* 当鼠标悬停时显示手型光标 */

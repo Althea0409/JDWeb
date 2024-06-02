@@ -1,5 +1,17 @@
 import "./style.css"
 
+document.getElementById('index-btn')!.addEventListener('click', function () {
+    window.location.href = 'index.html';
+});
+
+document.getElementById('login-btn')!.addEventListener('click', function () {
+    window.location.href = 'login.html';
+});
+
+document.getElementById('register-btn')!.addEventListener('click', function () {
+    window.location.href = 'register.html';
+});
+
 type Item = {
     name: string,
     price: number,
