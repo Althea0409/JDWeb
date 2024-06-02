@@ -422,6 +422,13 @@ th {
     background-color: #ffffff;
 }
 
+td img {
+    max-width: 150px;
+    /* 设置图片的最大宽度为100像素 */
+    max-height: 150px;
+    /* 设置图片的最大高度为100像素 */
+}
+
 .checkbox-cell {
     width: 2%;
 }

@@ -1,5 +1,6 @@
 import "./style.css"
 
+// 导航栏按钮点击事件
 document.getElementById('index-btn')!.addEventListener('click', function () {
     window.location.href = 'index.html';
 });
@@ -12,10 +13,13 @@ document.getElementById('register-btn')!.addEventListener('click', function () {
     window.location.href = 'register.html';
 });
 
-type Item = {
+// 购物车相关函数
+export type Item = {
+    imgSrc: string,
     name: string,
     price: number,
-    count: number   
+    count: number,
+    intro: string   
 }
       
 function getItemList():Item[] {
@@ -30,8 +34,6 @@ function getItemList():Item[] {
 function addItem(item:Item):void {
 
     let arr = getItemList()
-    // arr.push(item)
-
     let fi = arr.find((item) => item.name == item.name)
     if (fi) {
         fi.count += item.count
@@ -43,14 +45,14 @@ function addItem(item:Item):void {
 
 } 
 
-function removeItem(index:number) {
+function removeItem(index:number):void {
 
     let arr = getItemList()
     arr.splice(index, 1)
     localStorage.setItem('shopping', JSON.stringify(arr))
 }
     
-function removeAll(){
+function removeAll():void {
     localStorage.removeItem('shopping')
 }
 
