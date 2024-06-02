@@ -111,6 +111,7 @@ function createGoodsHtml(goods: Goods): string {
             </div>
             <div class="name">${goods.name}</div>
             <div class="price">${goods.price}</div>
+            <div class="btn">商品详情</div>
             <div class="btn">加入购物车</div>
         </div>
     `;
