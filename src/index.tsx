@@ -1,6 +1,6 @@
 import "./style.css"
 
-//导航栏按钮-跳转页面
+// 导航栏按钮点击事件
 document.getElementById('shopping-cart')!.addEventListener('click', function () {
     window.location.href = 'shopcart.html';
 });
@@ -14,7 +14,9 @@ document.getElementById('register-btn')!.addEventListener('click', function () {
 });
 
 //搜索功能
-
+document.getElementById('search-btn')!.addEventListener('click', function () {
+    window.location.href = 'search.html';
+});
 
 //渲染商品列表
 interface Goods {
