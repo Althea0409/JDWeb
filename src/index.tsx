@@ -13,7 +13,7 @@ document.getElementById('register-btn')!.addEventListener('click', function () {
     window.location.href = 'register.html';
 });
 
-// 搜索功能
+//搜索功能
 document.getElementById('search-btn')!.addEventListener('click', function () {
     window.location.href = 'search.html';
 });
@@ -23,108 +23,87 @@ interface Goods {
     imgSrc: string;
     name: string;
     price: string;
-    intro: string;
 }
 
-/* 
-   定义了一个名为 goods 的常量数组，其中包含了若干个对象。
-   对象符合 Goods 接口的定义
-*/
 const goods: Goods[] = [
     {
         imgSrc: './pic/1.png',
         name: '华为蓝牙耳机',
-        price: '￥289.00',
-        intro: '华为出品，高品质音质。'
+        price: '￥289.00'
     },
     {
         imgSrc: './pic/2.png',
         name: '索尼头戴式耳机',
-        price: '￥176.00',
-        intro: '舒适，隔音，无忧无虑。'
+        price: '￥176.00'
     },
     {
         imgSrc: './pic/3.png',
         name: 'ccd数码相机',
-        price: '￥209.00', 
-        intro: '高清照片，轻松拍摄。'
+        price: '￥209.00'
     },
     {
         imgSrc: './pic/4.png',
         name: 'MK870侧刻键盘',
-        price: '￥599.00',
-        intro: '轻松打字，高效工作。'
+        price: '￥599.00'
     },
     {
         imgSrc: './pic/5.png',
         name: '小米电脑包',
-        price: '￥99.00',
-        intro: '结实，轻盈，舒适。'
+        price: '￥99.00'
     },
     {
         imgSrc: './pic/6.png',
         name: '简约小椅子',
-        price: '￥146.00',
-        intro: '轻松休息，享受健康生活。'
+        price: '￥146.00'
     },
     {
         imgSrc: './pic/7.png',
         name: '小米无线吸尘器',
-        price: '￥899.90',
-        intro: '清洁无烦恼。'
+        price: '￥899.90'
     },
     {
         imgSrc: './pic/8.png',
         name: '狼蛛F98Pro',
-        price: '￥369.00',
-        intro: '手感很足，按键声音好听。'
+        price: '￥369.00'
     },
     {
         imgSrc: './pic/9.png',
         name: '自带线充电宝',
-        price: '￥119.00',
-        intro: '轻松充电，随时随地工作。'
+        price: '￥119.00'
     },
     {
         imgSrc: './pic/10.png',
         name: '漫步者无线耳机',
-        price: '￥128.00',
-        intro: '轻巧，舒适，高音质。'
+        price: '￥128.00'
     },
     {
         imgSrc: './pic/11.png',
         name: '雷蛇游戏鼠标',
-        price: '￥599.00',
-        intro: '高效性能，轻松玩游戏。'
+        price: '￥599.00'
     },
     {
         imgSrc: './pic/12.png',
         name: '简约办公书桌',
-        price: '￥179.00', 
-        intro: '轻松办公，随时随地工作。'
+        price: '￥179.00'
     },
     {
         imgSrc: './pic/13.png',
         name: '公牛移动插座',
-        price: '￥142.00',
-        intro: '便捷，安全，省电。'
+        price: '￥142.00'
     },
     {
         imgSrc: './pic/14.png',
         name: '小米平板6Pro',
-        price: '￥1429.00',
-        intro: '轻薄，高性能，超长续航。'
+        price: '￥1429.00'
     },
     {
         imgSrc: './pic/15.png',
         name: 'KTC电脑显示屏',
-        price: '￥729.00',
-        intro: '高清显示，轻松看视频。'
+        price: '￥729.00'
     }
 ];
 
-
-function createGoodsHtml(goods: Goods): string {
+function createGoodsHtml(goods: Goods, index: number): string {
     return `
         <div class="goods">
             <div>
@@ -132,47 +111,66 @@ function createGoodsHtml(goods: Goods): string {
             </div>
             <div class="name">${goods.name}</div>
             <div class="price">${goods.price}</div>
-            <div class="btn" onclick="redirectToDetailPage('${goods.name}')">商品详情</div>
-            <div class="btn">加入购物车</div>
+            <div class="btn" id="detail-btn-${index}">商品详情</div>
+            <div class="btn" id="add-cart-btn-${index}">加入购物车</div>
         </div>
     `;
 }
 
-function renderGoods(goods: Goods[]) {
+function renderGoods(goods: Goods[]): void {
     const goodsList = document.getElementById('goods-list');
     if (goodsList) {
         goodsList.innerHTML = goods.map(createGoodsHtml).join('');
+        addEventListeners();
     }
 }
 
-// 为商品详情按钮添加点击事件
-const detailButtons = document.querySelectorAll('.btn');
-detailButtons.forEach(button => {
-    if (button.textContent === "商品详情") {
-        button.addEventListener('click', function() {
-            const name = button.previousElementSibling?.textContent; // 使用可选链操作符
-            if (name) {
-                redirectToDetailPage(name); // 只有在 name 不为 null 或 undefined 时才调用函数
-            }
-        });
-    }
-});
+function addEventListeners() {
+    goods.forEach((_, index) => {
+        const detailButton = document.getElementById(`detail-btn-${index}`);
+        const addCartButton = document.getElementById(`add-cart-btn-${index}`);
 
-// 页面加载后的逻辑
-document.addEventListener('DOMContentLoaded', function() {
-    // 渲染商品列表
-    renderGoods(goods);
-});
+        if (detailButton) {
+            detailButton.addEventListener('click', () => {
+                const name = goods[index].name;
+                window.location.href = 'detail.html?name=' + encodeURIComponent(name);
+            });
+        }
 
-// 商品详情页面跳转函数
-function redirectToDetailPage(name: string) {
-    // 执行页面跳转到 detail.html，并将商品名称作为参数传递
-    window.location.href = 'detail.html?name=' + name;
-    // 或者使用下面这种方式
+        if (addCartButton) {
+            addCartButton.addEventListener('click', () => {
+                const name = goods[index].name;
+                const price = parseFloat(goods[index].price.replace('￥', ''));
+                const count = 1; // 默认数量为1
+                const item = { name, price, count };
+                addItem(item);
+                alert('商品已加入购物车');
+            });
+        }
+    });
 }
+
+function addItem(item: { name: string, price: number, count: number }) {
+    let arr = getItemList();
+    let fi = arr.find((i) => i.name == item.name);
+    if (fi) {
+        fi.count += item.count;
+    } else {
+        arr.push(item);
+    }
+    localStorage.setItem('shopping', JSON.stringify(arr));
+}
+
+function getItemList(): { name: string, price: number, count: number }[] {
+    let data = localStorage.getItem('shopping');
+    if (data == null) {
+        data = '[]';
+    }
+    return JSON.parse(data);
+}
+
+renderGoods(goods);
 
 export{
-    renderGoods,
-    redirectToDetailPage,
-    createGoodsHtml
+
 }

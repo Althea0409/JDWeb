@@ -451,3 +451,13 @@ td img {
     background-color: #f2f2f2;
     cursor: pointer;
 }
+
+/* 商品详情页样式 */
+.detail img {
+    width: 1500px;
+    height: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;   
+    margin-bottom: 20px;
+}
