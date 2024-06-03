@@ -1,23 +1,5 @@
 import "./style.css"
 
-// 导航栏按钮点击事件
-document.getElementById('shopping-cart')!.addEventListener('click', function () {
-    window.location.href = 'shopcart.html';
-});
-
-document.getElementById('login-btn')!.addEventListener('click', function () {
-    window.location.href = 'login.html';
-});
-
-document.getElementById('register-btn')!.addEventListener('click', function () {
-    window.location.href = 'register.html';
-});
-
-//搜索功能
-document.getElementById('search-btn')!.addEventListener('click', function () {
-    window.location.href = 'search.html';
-});
-
 //渲染商品列表
 interface Goods {
     imgSrc: string;
@@ -116,6 +98,17 @@ function createGoodsHtml(goods: Goods, index: number): string {
         </div>
     `;
 }
+
+/*
+goodsList.innerHTML = goods.map(createGoodsHtml).join('');
+
+     let htmlString = '';
+        for (let i = 0; i < goods.length; i++) {
+            htmlString += createGoodsHtml(goods[i], i);
+        }
+        goodsList.innerHTML = htmlString;
+        addEventListeners();
+*/
 
 function renderGoods(goods: Goods[]): void {
     const goodsList = document.getElementById('goods-list');

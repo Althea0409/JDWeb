@@ -1,18 +1,5 @@
 import "./style.css"
 
-// 导航栏按钮点击事件
-document.getElementById('index-btn')!.addEventListener('click', function () {
-    window.location.href = 'index.html';
-});
-
-document.getElementById('login-btn')!.addEventListener('click', function () {
-    window.location.href = 'login.html';
-});
-
-document.getElementById('register-btn')!.addEventListener('click', function () {
-    window.location.href = 'register.html';
-});
-
 // 购物车相关函数
 export type Item = {
     imgSrc: string,
