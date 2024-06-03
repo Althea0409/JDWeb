@@ -100,7 +100,7 @@ function createGoodsHtml(goods: Goods, index: number): string {
 }
 
 /*
-goodsList.innerHTML = goods.map(createGoodsHtml).join('');
+    goodsList.innerHTML = goods.map(createGoodsHtml).join('');
 
      let htmlString = '';
         for (let i = 0; i < goods.length; i++) {
