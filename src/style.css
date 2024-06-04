@@ -8,18 +8,13 @@
 /* 导航栏样式 */
 .nav {
     display: flex;
-    /* 使用flex布局 */
     align-items: center;
-    /* 垂直居中 */
     justify-content: space-between;
-    /* 两端对齐 */
     padding: 10px;
-    /* 添加内边距来增加可读性 */
 }
 
 .nav div {
     margin: 0 10px;
-    /* 设置各div之间的间距 */
 }
 
 /* 导航栏按钮样式 */
@@ -31,43 +26,30 @@
 #login-btn,
 #register-btn {
     background-color: #DD2727;
-    /* 设置按钮背景色 */
     color: #fff;
-    /* 设置按钮文字颜色 */
     padding: 5px 10px;
-    /* 设置按钮内边距 */
     border-radius: 5px;
-    /* 设置按钮圆角 */
     cursor: pointer;
-    /* 设置鼠标样式为手型 */
 }
 
 #login-btn:hover,
 #register-btn:hover {
     background-color: rgb(239, 98, 98);
-    /* 设置按钮鼠标悬停时的背景色 */
 }
 
 /* 头部样式 */
 .header {
     background-color: #ffffff;
-    /* 设置背景色 */
     display: flex;
-    /* 使用flex布局 */
     justify-content: space-between;
-    /* 两端对齐 */
     align-items: center;
-    /* 垂直居中 */
     padding: 10px;
-    /* 添加内边距来增加可读性 */
 }
 
 .header div {
     background-color: #ffffff;
     padding: 5px 10px;
-    /* 设置内边距 */
     text-align: center;
-    /* 文字居中 */
 }
 
 .welcome {
@@ -75,57 +57,42 @@
     color: #C81623;
     text-align: center;
     font-size: 30px;
-  }
+}
 
 .logo1 {
     background-image: url('./img/logo1.png');
     background-color: #ffffff;
     background-size: cover;
-    /* 设置背景图像尺寸 */
     width: 150px;
-    /* 设置Logo宽度 */
     height: 60px;
-    /* 设置Logo高度 */
     margin-left: 160px;
 }
 
 .logo2 {
     background-image: url('./img/logo2.png');
     background-size: cover;
-    /* 设置背景图像尺寸 */
     width: 50px;
-    /* 设置Logo宽度 */
     height: 60px;
-    /* 设置Logo高度 */
     margin-right: 160px;
 }
 
 /* 搜索框样式 */
 #search {
-
     flex: 1;
-    /* 搜索框占据剩余空间 */
     padding: 10px;
-    /* 设置内边距 */
     background-color: #ffffff;
-    /* 设置背景色 */
     border-radius: 20px;
-    /* 设置边框圆角 */
     outline: none;
-    /* 去掉默认的轮廓样式 */
     transition: all 0.3s;
-    /* 设置过渡效果 */
 }
 
 #search::placeholder {
     color: #999;
-    /* 设置占位符文字颜色 */
 }
 
 #search:hover,
 #search:focus {
     border-color: #666;
-    /* 设置鼠标悬停和聚焦时的边框颜色 */
 }
 
 #search-input {
@@ -135,54 +102,40 @@
     border-radius: 20px;
     outline: none;
     flex: 1;
-    /* 设置搜索框占据更多的剩余空间 */
     min-width: 650px;
-    /* 设置最小宽度 */
 }
 
 /* 搜索按钮样式 */
 #search-btn {
     padding: 10px 16px;
-    /* 设置按钮内边距 */
     background-color: #DD2727;
-    /* 设置按钮背景色 */
     color: #fff;
-    /* 设置按钮文字颜色 */
     border: none;
-    /* 去掉边框 */
     border-radius: 20px;
-    /* 设置按钮圆角 */
     cursor: pointer;
-    /* 设置鼠标样式为手型 */
     transition: all 0.3s;
-    /* 设置过渡效果 */
     font-size: 15px;
 }
 
 #search-btn:hover {
     background-color: #f49b9b;
-    /* 设置按钮鼠标悬停时的背景色 */
 }
 
 /* 推荐栏样式 */
 .header .recommend span:first-child {
     color: #DD2727;
-    /* 设置第一个span为红色 */
     background-color: #ffffff;
 }
 
 .header .recommend {
     color: #666;
     display: flex;
-    /* 使用flex布局 */
     align-items: center;
-    /* 垂直居中 */
 }
 
 span {
     background-color: #ffffff;
     margin: 0 10px;
-    /* 为每个词语设置左右间隔为10像素 */
 }
 
 /* 中部样式 */
@@ -230,41 +183,32 @@ span {
     background-color: #ffffff;
     padding: 8px 15px;
     cursor: pointer;
-    /* transition: all 0.3s; */
 }
 
 .rank1 {
     background-image: url('./img/rank1.png');
     background-size: cover;
-    /* 设置第二个元素的背景图片 */
     display: inline-block;
     height: 60px;
     width: 259px;
-    /* 设置元素的高度和宽度 */
     margin-top: 15px;
-    /* 设置元素的上边距 */
 }
 
 .rank2 {
     background-image: url('./img/rank2.png');
     background-size: cover;
-    /* 设置第二个元素的背景图片 */
     display: inline-block;
     height: 60px;
     width: 259px;
-    /* 设置元素的高度和宽度 */
     margin-top: 15px;
-    /* 设置元素的上边距 */
 }
 
 .rank3 {
     background-image: url('./img/rank3.png');
     background-size: cover;
-    /* 设置第三个元素的背景图片 */
     display: inline-block;
     height: 60px;
     width: 259px;
-    /* 设置元素的高度和宽度 */
     margin-top: 15px;
 }
 
@@ -290,14 +234,11 @@ span {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-    /* 确保 padding 不影响宽度 */
 }
 
 .goods div {
     padding: 5px 5px;
-    /* 设置内边距 */
     text-align: center;
-    /* 文字居中 */
     background-color: #ffffff;
 }
 
@@ -339,33 +280,23 @@ span {
 /* 底部样式 */
 .footer {
     background-color: #333;
-    /* 设置背景颜色 */
     color: #ffffff;
-    /* 设置文本颜色 */
     padding: 20px 0;
-    /* 设置内边距 */
     text-align: center;
-    /* 文本居中对齐 */
 }
 
 /* 设置页脚链接样式 */
 .footer div {
     display: inline-block;
-    /* 将链接元素显示为行内块元素，使其水平排列 */
     margin: 0 20px;
-    /* 设置链接之间的水平间距 */
     font-size: 20px;
-    /* 设置字体大小 */
     background-color: #333;
 }
 
 /* 链接悬停样式 */
 .footer div:hover {
     color: #de1b28;
-    /* 设置悬停时的文本颜色 */
     cursor: pointer;
-    /* 当鼠标悬停时显示手型光标 */
-
 }
 
 /* 购物车样式 */
@@ -408,9 +339,7 @@ td,
 th {
     border: 1px solid transparent;
     border-top: 1px solid #dddddd;
-    /* 只显示上边框 */
     border-bottom: 1px solid #dddddd;
-    /* 只显示下边框 */
 }
 
 /* 第一行单元格只显示顶部边框 */
@@ -431,9 +360,7 @@ th {
 
 td img {
     max-width: 150px;
-    /* 设置图片的最大宽度为100像素 */
     max-height: 150px;
-    /* 设置图片的最大高度为100像素 */
 }
 
 .checkbox-cell {
@@ -465,21 +392,23 @@ td img {
     height: auto;
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 20px;   
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* 搜索结果 */
 .search-result {
-    display: flex; /* 使用 flex 布局来呈现搜索结果 */
-    flex-wrap: wrap; /* 实现搜索结果的自动换行 */
+    display: flex;
+    flex-wrap: wrap;
 }
+
 .search-result .item {
     width: 200px;
     margin: 10px;
     padding: 10px;
     border: 1px solid #ccc;
 }
+
 #goods-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -495,14 +424,11 @@ td img {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-    /* 确保 padding 不影响宽度 */
 }
 
 .goods div {
     padding: 5px 5px;
-    /* 设置内边距 */
     text-align: center;
-    /* 文字居中 */
     background-color: #ffffff;
 }
 
@@ -525,80 +451,76 @@ td img {
 }
 
 /* 登录注册样式 */
-
 .register-form,
 .login-form {
-  margin: 20px; /* 设置外边距 */
-  padding: 20px;
-  position: relative;
-  display: flex;
-  justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .register-form form,
 .login-form form {
-  background-color: #ffffff; /* 白色表单背景 */
-  padding: 20px;
-  border-radius: 0 0 10px 10px; /* 圆角边框 */
-  width: 300px; /* 设置表单宽度 */
-  position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 0 0 10px 10px;
+    width: 300px;
+    position: relative;
 }
 
 .register-form form::before,
 .login-form form::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  border-radius: 5px 5px 0 0;
-  background-color: #DD2727; /* 设置颜色 */
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    background-color: #DD2727;
 }
 
 .register-form form label,
 .login-form form label {
-  background-color: #ffffff; /* 白色背景 */
-  display: block;
-  margin-bottom: 15px;
+    background-color: #ffffff;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .register-form form input[type="text"],
 .register-form form input[type="password"],
 .login-form form input[type="text"],
 .login-form form input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
 }
 
 .register-form form input[type="submit"],
 .login-form form input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  color: #fff;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
 }
 
 .register-form form input[type="submit"] {
-  background-color: #DD2727; /* 红色按钮 */
-  font-size: 16px;
-  margin-top: 15px;
+    background-color: #DD2727;
+    font-size: 16px;
+    margin-top: 15px;
 }
 
 .login-form form input[type="submit"] {
-  background-color: #DD2727; /* 红色按钮 */
-  font-size: 16px;
-  margin-top: 15px;
+    background-color: #DD2727;
+    font-size: 16px;
+    margin-top: 15px;
 }
-
-
-
-
-  
