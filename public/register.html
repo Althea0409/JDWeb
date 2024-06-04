@@ -15,30 +15,38 @@
         <div id="index-btn" onclick="location.href='index.html'">京东首页</div>
         <div id="shopping-cart" onclick="location.href='shopcart.html'">购物车</div>
         <div id="login-btn" onclick="location.href='login.html'">登录</div>
-        <div id="register-btn" onclick="location.href='register.html'">注册</div>
         <div></div>
     </div>
 
     <div class="header">
         <div class="logo1"></div>
-        <div>
-            <div id="search">
-                <input type="text" id="search-input" placeholder="请输入商品名称">
-                <button id="search-btn" onclick="location.href='search.html'">搜 索</button>
-            </div>
-            <div class="recommend">
-                <span>为您推荐:</span>
-                <span>618活动满减</span>
-                <span>疯狂星期六</span>
-                <span>京东家电</span>
-                <span>京东超市</span>
-                <span>京东金融</span>
-                <span>限时秒杀</span>
-                <span>会员</span>
-            </div>
-        </div>
+        <div class="welcome">- 欢迎注册 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <div class="logo2"></div>
     </div>
+
+    <div class="register-form">
+        <div>
+            <form>
+                <label for="regUsername">用户名：</label>
+                <input type="text" id="regUsername" name="regUsername">
+              
+                <label for="phone">手机号：</label>
+                <input type="text" id="phone" name="phone">
+
+                <label for="regPassword">密码：</label>
+                <input type="password" id="regPassword" name="regPassword">
+              
+                <label for="confirmPassword">确认密码：</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+              
+                <input type="submit" value="确认注册">
+              
+              </form>
+        </div>
+    </div>
+
+
+
 </body>
 
 </html>
