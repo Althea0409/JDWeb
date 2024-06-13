@@ -219,21 +219,14 @@ span {
 }
 
 /*商品列表样式 */
-#goods-list {
+#goods-list,
+#result-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     padding: 10px;
     margin-left: 110px;
     margin-right: 105px;
-}
-
-.goods {
-    background-color: #ffffff;
-    padding: 3px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .goods div {
@@ -277,6 +270,53 @@ span {
     background-color: #9b131c;
 }
 
+/* 搜索结果样式 */
+.search-result {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-result .item {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#result-none {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.goods {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.goods:hover {
+    transform: scale(1.05);
+}
+
+.goods .intro {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.goods .price {
+    color: #C81623;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 /* 底部样式 */
 .footer {
     background-color: #333;
@@ -285,7 +325,6 @@ span {
     text-align: center;
 }
 
-/* 设置页脚链接样式 */
 .footer div {
     display: inline-block;
     margin: 0 20px;
@@ -293,7 +332,6 @@ span {
     background-color: #333;
 }
 
-/* 链接悬停样式 */
 .footer div:hover {
     color: #de1b28;
     cursor: pointer;
@@ -376,13 +414,41 @@ td img {
 }
 
 .count-cell {
-    width: 1%;
+    width: 10%;
+}
+.count-input {
+    width: 50px; /* 设置数量输入框的宽度 */
+}
+
+.action-cell {
+    width: 10%;
 }
 
 .delete-btn {
     padding: 5px 10px;
     border: 2px solid #C81623;
     background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* 隐藏输入框内置的加减按钮 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity {
+    padding: 70px;
+    display: flex;
+    /* align-items: center; */
+}
+.quantity input {
+    width: 50px;
+    text-align: center;
+}
+.quantity button {
+    padding: 5px 10px;
     cursor: pointer;
 }
 
@@ -396,59 +462,6 @@ td img {
     margin-bottom: 20px;
 }
 
-/* 搜索结果 */
-.search-result {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.search-result .item {
-    width: 200px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-#goods-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    padding: 10px;
-    margin-left: 110px;
-    margin-right: 105px;
-}
-
-.goods {
-    background-color: #ffffff;
-    padding: 3px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.goods div {
-    padding: 5px 5px;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-.goods img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.goods .name {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.goods .price {
-    color: #C81623;
-    font-weight: bold;
-    font-size: 18px;
-}
 
 /* 登录注册样式 */
 .register-form,

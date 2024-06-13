@@ -24,7 +24,7 @@
         <div>
             <div id="search">
                 <input type="text" id="search-input" placeholder="">
-                <button id="search-btn" onclick="location.href='search.html'">搜 索</button>
+                <button id="search-btn" onclick="search()">搜 索</button>
             </div>
             <div class="recommend">
                 <span>为您推荐:</span>
@@ -39,7 +39,10 @@
         <div class="logo2"></div>
     </div>
 
-    <div id="search-result"></div>
+    <div id="search-result">
+        <div id="result-none">- 未找到相关搜索结果 -</div>
+        <div id="result-list"></div>
+    </div>
 </body>
 
 </html>

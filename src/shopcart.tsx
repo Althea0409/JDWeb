@@ -19,9 +19,9 @@ function getItemList():Item[] {
 }   
 
 function addItem(item:Item):void {
-
     let arr = getItemList()
-    let fi = arr.find((item) => item.name == item.name)
+
+    let fi = arr.find((i) => i.name == item.name)
     if (fi) {
         fi.count += item.count
     } else {
@@ -33,7 +33,6 @@ function addItem(item:Item):void {
 } 
 
 function removeItem(index:number):void {
-
     let arr = getItemList()
     arr.splice(index, 1)
     localStorage.setItem('shopping', JSON.stringify(arr))
@@ -43,55 +42,23 @@ function removeAll():void {
     localStorage.removeItem('shopping')
 }
 
-function getPrice(id:number):number {
+// function getPrice(id:number):number {
 
-    return 0;
+//     return 0;
 
-}       
+// }       
 
-function getCount(id:number):number {
+// function getCount(id:number):number {
 
-    return 0;
-}
-
-// 假设这是你的 updateTotal 函数
-function updateTotal(input: HTMLInputElement): void {
-    if (input.parentElement && input.parentElement.nextElementSibling){
-        const priceString = (input.parentElement.nextElementSibling as HTMLElement).innerText;
-        const price = parseFloat(priceString.replace('￥', ''));
-        const quantity = parseInt(input.value);
-
-        const total = price * quantity;
-
-        const totalCell = input.parentElement.nextElementSibling.nextElementSibling as HTMLElement;
-    if (totalCell) {
-        totalCell.innerText = '￥' + total.toFixed(2);
-    } else {
-        console.error('Total cell is null');
-    }
-    } else {
-        console.error('Input element\'s parent or next sibling is null');
-    }
-}
-
-// 在 TypeScript 中创建对应的函数
-function incrementQuantity(input: HTMLInputElement): void {
-    input.stepUp(1);
-    updateTotal(input);
-}
-
-function decrementQuantity(input: HTMLInputElement): void {
-    input.stepDown(1);
-    updateTotal(input);
-}
-
-
+//     return 0;
+// }
 
 export {
     getItemList,
     addItem,
     removeItem,
     removeAll,
-    getPrice,
-    getCount
 }
+
+
+
