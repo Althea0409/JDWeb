@@ -54,6 +54,39 @@ function getCount(id:number):number {
     return 0;
 }
 
+// 假设这是你的 updateTotal 函数
+function updateTotal(input: HTMLInputElement): void {
+    if (input.parentElement && input.parentElement.nextElementSibling){
+        const priceString = (input.parentElement.nextElementSibling as HTMLElement).innerText;
+        const price = parseFloat(priceString.replace('￥', ''));
+        const quantity = parseInt(input.value);
+
+        const total = price * quantity;
+
+        const totalCell = input.parentElement.nextElementSibling.nextElementSibling as HTMLElement;
+    if (totalCell) {
+        totalCell.innerText = '￥' + total.toFixed(2);
+    } else {
+        console.error('Total cell is null');
+    }
+    } else {
+        console.error('Input element\'s parent or next sibling is null');
+    }
+}
+
+// 在 TypeScript 中创建对应的函数
+function incrementQuantity(input: HTMLInputElement): void {
+    input.stepUp(1);
+    updateTotal(input);
+}
+
+function decrementQuantity(input: HTMLInputElement): void {
+    input.stepDown(1);
+    updateTotal(input);
+}
+
+
+
 export {
     getItemList,
     addItem,
