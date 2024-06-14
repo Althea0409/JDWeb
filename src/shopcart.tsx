@@ -21,7 +21,7 @@ function getItemList():Item[] {
 function addItem(item:Item):void {
     let arr = getItemList()
 
-    let fi = arr.find((i) => i.name == item.name)
+    let fi = arr.find((i) => i.name === item.name)
     if (fi) {
         fi.count += item.count
     } else {
@@ -41,17 +41,6 @@ function removeItem(index:number):void {
 function removeAll():void {
     localStorage.removeItem('shopping')
 }
-
-// function getPrice(id:number):number {
-
-//     return 0;
-
-// }       
-
-// function getCount(id:number):number {
-
-//     return 0;
-// }
 
 export {
     getItemList,

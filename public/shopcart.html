@@ -39,6 +39,7 @@
     </div>
 
     <div class="cart">
+
         <div class="cartitle">
             <div class="cart-pic">
                 <img src="./pic/cart.png" alt="">
@@ -46,44 +47,8 @@
             <div>我的购物车</div>
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th class="checkbox-cell"><input type="checkbox" id="select-all"></th>
-                    <th class="pic-cell">商品图片</th>
-                    <th class="name-cell">商品名称</th>
-                    <th class="intro-cell">商品信息</th>
-                    <th class="price-cell">单价</th>
-                    <th class="count-cell">数量</th>
-                    <th class="total-cell">小计</th>
-                    <th class="action-cell">操作</th>
-                </tr>
-            </thead>
-            <tbody id="cart-body">
-                <tr>
-                    <td><input type="checkbox" class="item-checkbox"></td>
-                    <td><img src="./pic/1.png" alt=""></td>
-                    <td>华为蓝牙耳机</td>
-                    <td>华为出品，享受高品质音质</td>
-                    <td class="price">￥289.00</td>
-                    <td class="quantity">
-                        <button id="decrease">-</button>
-                        <input type="number" id="countInput" value="1">
-                        <button id="increase">+</button>
-                    </td>
-                    <td class="total-price">￥289.00</td>
-                    <td><button class="delete-btn">移除</button></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="summary">
-            <div class="total">
-                <span>总价:</span>
-                <span class="total-price"></span>
-            </div>
-            <button class="checkout-btn">结算</button>
-        </div>
+        <div id="cart-list"></div>
+        
     </div>
 
 </body>

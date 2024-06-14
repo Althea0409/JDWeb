@@ -105,11 +105,9 @@ function search() {
     const keyword = (document.getElementById('search-input') as HTMLInputElement).value;
     if (keyword) {
         localStorage.setItem('searchKeyword', keyword);
-        window.location.href = 'search.html'; // 使用 window.location 代替 location
+        window.location.href = 'search.html'; 
     }
 }
-
-// 将 search 函数暴露到全局作用域
 (window as any).search = search;
 
 
@@ -162,7 +160,7 @@ function addEventListeners() {
             addCartButton.addEventListener('click', () => {
                 const name = goods[index].name;
                 const price = parseFloat(goods[index].price.replace('￥', ''));
-                const count = 1; // 默认数量为1
+                const count = 1; 
                 const item = { name, price, count };
                 addItem(item);
                 alert('商品已加入购物车');
@@ -192,6 +190,6 @@ function getItemList(): { name: string, price: number, count: number }[] {
 
 renderGoods(goods);
 
-export{
-
-}
+export { 
+    getItemList 
+};
