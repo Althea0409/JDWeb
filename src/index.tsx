@@ -125,17 +125,6 @@ function createGoodsHtml(goods: Goods, index: number): string {
     `;
 }
 
-/*
-    goodsList.innerHTML = goods.map(createGoodsHtml).join('');
-    即：
-     let htmlString = '';
-        for (let i = 0; i < goods.length; i++) {
-            htmlString += createGoodsHtml(goods[i], i);
-        }
-        goodsList.innerHTML = htmlString;
-        addEventListeners();
-*/
-
 function renderGoods(goods: Goods[]): void {
     const goodsList = document.getElementById('goods-list');
     if (goodsList) {

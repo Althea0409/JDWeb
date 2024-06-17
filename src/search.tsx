@@ -1,7 +1,6 @@
 import "./style.css"
 
 // 商品数据
-
 interface Goods {
     imgSrc: string;
     name: string;
@@ -13,7 +12,7 @@ const goods: Goods[] = [
         imgSrc: './pic/1.png',
         name: '华为蓝牙耳机',
         price: '￥289.00',
-        intro: '华为蓝牙耳机，畅享无线音乐，自由无束缚'
+        intro: '华为蓝牙耳机，畅享音乐，自由无束缚'
     },
     {
         imgSrc: './pic/2.png',
@@ -139,20 +138,5 @@ window.onload = () => {
         localStorage.removeItem('searchKeyword'); // 清除已使用的搜索关键词
     }
 };
-
-// function renderGoods() {
-//     document.querySelector('#search-result')!.innerHTML = goods.map((item: any, id) => {
-//         return `
-//             <div class="goods">
-//                 <div>
-//                     <img src="${item.imgSrc}" alt="${item.name}">
-//                 </div>
-//                 <div class="name">${item.name}</div>
-//                 <div class="intro">${item.intro}</div>
-//                 <div class="price">${item.price}</div>
-//             </div>
-//         `
-//     }).join("")
-// }
 
 export { };
