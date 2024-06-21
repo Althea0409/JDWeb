@@ -396,13 +396,7 @@ span:hover {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin-right: 20px;
-}
-
-.item-info {
-    background-color: #fff;
-    flex-grow: 1;
-    margin-right: 20px;
+    margin-left: 16px;
 }
 
 .item-name {
@@ -410,18 +404,21 @@ span:hover {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
+    width: 130px;
 }
 
 .item-intro {
     background-color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
+    width: 450px;
 }
 
 .item-price, .item-count {
     background-color: #fff;
     font-size: 16px;
     margin-right: 20px;
+    width: 1px;
 }
 
 .remove-item-btn {
@@ -432,6 +429,7 @@ span:hover {
     padding: 6px 15px;
     cursor: pointer;
     border-radius: 5px;
+    width: 70px;
 }
 
 .cart-summary {
