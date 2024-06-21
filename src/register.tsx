@@ -15,6 +15,8 @@ regForm.addEventListener('submit', function(event) {
   if (validateForm()) {
     // 提交表单的其他逻辑
     alert('注册成功！');
+    // 跳转到登录页面
+    window.location.href = '/login.html'; 
   }
 });
 
@@ -47,6 +49,5 @@ function validateForm(): boolean {
 
   return true; // 所有验证通过
 }
-
 
 export {}

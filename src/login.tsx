@@ -13,6 +13,8 @@ loginForm.addEventListener('submit', function(event) {
   if (validateLoginForm()) {
     // 提交表单的其他逻辑
     alert('登录成功！');
+    // 跳转到首页
+    window.location.href = '/index.html';
   }
 });
 
