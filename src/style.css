@@ -280,6 +280,26 @@ span:hover {
     background-color: #9b131c;
 }
 
+/* 底部样式 */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer div {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 20px;
+    background-color: #333;
+}
+
+.footer div:hover {
+    color: #de1b28;
+    cursor: pointer;
+}
+
 /* 搜索结果样式 */
 .search-result {
     display: flex;
@@ -325,26 +345,6 @@ span:hover {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
-}
-
-/* 底部样式 */
-.footer {
-    background-color: #333;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer div {
-    display: inline-block;
-    margin: 0 20px;
-    font-size: 20px;
-    background-color: #333;
-}
-
-.footer div:hover {
-    color: #de1b28;
-    cursor: pointer;
 }
 
 /* 购物车样式 */
@@ -490,7 +490,6 @@ span:hover {
 .confirm-buttons button:last-child {
     background-color: #ff4d4f;
 }
-
 
 /* 登录注册样式 */
 .register-form,

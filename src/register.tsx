@@ -1,6 +1,9 @@
+// 注册页面
+
+// 导入样式文件
 import "./style.css"
 
-// 获取表单元素
+// 通过 document.querySelector 和 document.getElementById 获取表单及其相关输入框元素
 const regForm = document.querySelector('.register-form form') as HTMLFormElement;
 const regUsername = document.getElementById('regUsername') as HTMLInputElement;
 const phone = document.getElementById('phone') as HTMLInputElement;
@@ -8,46 +11,55 @@ const regPassword = document.getElementById('regPassword') as HTMLInputElement;
 const confirmPassword = document.getElementById('confirmPassword') as HTMLInputElement;
 
 // 添加表单提交事件监听
-regForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // 阻止默认提交行为
+regForm.addEventListener('submit', function (event) {
+    event.preventDefault(); // 阻止默认提交行为
 
-  // 执行表单验证逻辑
-  if (validateForm()) {
-    // 提交表单的其他逻辑
-    alert('注册成功！');
-    // 跳转到登录页面
-    window.location.href = '/login.html'; 
-  }
+    // 执行表单验证逻辑
+    if (validateForm()) {
+        alert('注册成功！');// 提交表单的其他逻辑
+        window.location.href = '/login.html'; // 跳转到登录页面
+    }
 });
 
-// 表单验证函数
+// 定义了一个 validateForm 函数，用于验证表单输入：
+// 检查用户名是否为空。
+// 检查手机号是否为空。
+// 检查密码是否为空。
+// 检查确认密码是否为空。
+// 检查密码和确认密码是否一致。
 function validateForm(): boolean {
-  if (regUsername.value.trim() === '') {
-    alert('请输入用户名');
-    return false;
-  }
+    if (regUsername.value.trim() === '') {
+        alert('请输入用户名');
+        return false;
+    }
 
-  if (phone.value.trim() === '') {
-    alert('请输入手机号');
-    return false;
-  }
+    if (phone.value.trim() === '') {
+        alert('请输入手机号');
+        return false;
+    }
 
-  if (regPassword.value.trim() === '') {
-    alert('请输入密码');
-    return false;
-  }
+    if (regPassword.value.trim() === '') {
+        alert('请输入密码');
+        return false;
+    }
 
-  if (confirmPassword.value.trim() === '') {
-    alert('请确认密码');
-    return false;
-  }
+    if (confirmPassword.value.trim() === '') {
+        alert('请确认密码');
+        return false;
+    }
 
-  if (regPassword.value.trim() !== confirmPassword.value.trim()) {
-    alert('密码和确认密码不一致');
-    return false;
-  }
+    if (regPassword.value.trim() !== confirmPassword.value.trim()) {
+        alert('密码和确认密码不一致');
+        return false;
+    }
 
-  return true; // 所有验证通过
+    return true; // 所有验证通过
 }
 
-export {}
+export { }
+
+/*
+  这段代码实现了一个简单的注册页面，包括表单的验证和提交。
+  通过阻止默认的表单提交行为，并在提交前进行表单验证，确保用户输入的完整性和正确性。
+  如果验证通过，则显示注册成功的提示，并跳转到登录页面。
+ */

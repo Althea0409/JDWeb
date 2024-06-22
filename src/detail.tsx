@@ -1,5 +1,9 @@
+// 商品详情页
+
+// 导入样式文件
 import "./style.css";
 
+// 商品接口
 interface Goods {
     imgSrc: string;
     name: string;
@@ -7,6 +11,7 @@ interface Goods {
     intro:string;
 }
 
+// 商品列表
 const goods: Goods[] = [
     {
         imgSrc: './pic/1.png',
@@ -100,11 +105,13 @@ const goods: Goods[] = [
     }
 ];
 
+// 定义了一个 getProductNameFromUrl 函数，用于从URL中获取商品名称。
 function getProductNameFromUrl(): string | null {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('name');
 }
 
+// 定义了一个 renderProductDetail 函数，用于将商品详情渲染到页面上。
 function renderProductDetail(product: Goods): void {
     const productDetail = document.getElementById('product-detail');
     if (productDetail) {
@@ -125,6 +132,7 @@ function renderProductDetail(product: Goods): void {
     }
 }
 
+// 定义了一个 addToCart 函数，用于将商品添加到购物车中，如果购物车中已有同名商品，则增加其数量
 function addToCart(product: Goods): void {
     const cartItem = { name: product.name, price: parseFloat(product.price.replace('￥', '')), count: 1 };
     let cart = JSON.parse(localStorage.getItem('shopping') || '[]');
@@ -138,6 +146,12 @@ function addToCart(product: Goods): void {
     alert('商品已加入购物车');
 }
 
+// 监听DOMContentLoaded事件，当页面加载完成后执行以下操作：
+// 1. 获取商品名称
+// 2. 从商品列表中查找商品
+// 3. 渲染商品详情
+// 4. 绑定返回首页按钮的点击事件
+// 5. 绑定加入购物车按钮的点击事件
 document.addEventListener('DOMContentLoaded', () => {
     const productName = getProductNameFromUrl();
     if (productName) {
@@ -151,25 +165,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.location.href = 'index.html';
                 });
             } else {
-                console.error('Back to home button not found');
+                console.error('未找到返回首页按钮');
             }
-
+    
             const addToCartButton = document.getElementById('add-to-cart');
             if (addToCartButton) {
                 addToCartButton.addEventListener('click', () => {
                     addToCart(product);
                 });
             } else {
-                console.error('Add to cart button not found');
+                console.error('未找到加入购物车按钮');
             }
         } else {
-            console.error('Product not found');
+            console.error('未找到该商品');
         }
     } else {
-        console.error('Product name not found in URL');
+        console.error('未找到商品名称');
     }
 });
 
-export{
-        
-}
+export{}

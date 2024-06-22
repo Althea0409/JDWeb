@@ -1,5 +1,9 @@
+// 购物车页面
+
+// 导入样式文件
 import "./style.css";
 
+// 商品接口
 interface CartItem {
     name: string;
     price: number;
@@ -15,8 +19,9 @@ interface Goods {
     intro: string;
 }
 
+// 商品列表
+// 包含多个商品项，每个商品项都符合Goods接口的定义
 const goods: Goods[] = [
-    // 商品列表
     {
         imgSrc: './pic/1.png',
         name: '华为蓝牙耳机',
@@ -107,14 +112,18 @@ const goods: Goods[] = [
         price: '￥729.00',
         intro: 'KTC电脑显示屏，高清显示，让你看清屏幕'
     }
-    
+
 ];
 
+// 购物车相关函数
+// 从localStorage中获取购物车数据，并将其解析为CartItem数组
 function getItemList(): CartItem[] {
     const data = localStorage.getItem('shopping') || '[]';
     return JSON.parse(data);
 }
 
+// 添加商品到购物车
+// 如果购物车中已有同名商品，则增加其数量；否则，将新商品添加到购物车中
 function addItem(item: CartItem): void {
     const cart = getItemList();
     const existingItem = cart.find(cartItem => cartItem.name === item.name);
@@ -126,30 +135,35 @@ function addItem(item: CartItem): void {
     localStorage.setItem('shopping', JSON.stringify(cart));
 }
 
+// 从购物车中移除指定索引的商品
 function removeItem(index: number): void {
     const cart = getItemList();
     cart.splice(index, 1);
     localStorage.setItem('shopping', JSON.stringify(cart));
 }
 
+// 从购物车移除所有商品
 function removeAll(): void {
     localStorage.removeItem('shopping');
 }
 
+// 渲染购物车
 function renderCart(): void {
     const cartList = document.getElementById('cart-list');
     if (!cartList) return;
-
     const items = getItemList();
     let total = 0;
     let itemCount = 0;
 
+    // 使用 map 方法遍历购物车中的每个商品项，生成相应的 HTML 字符串。
+    // 在遍历过程中，计算总价和商品总数，并查找商品列表中对应的商品信息（如图片路径和简介）
+    // 生成的 HTML 字符串包含商品的图片、名称、简介、价格、数量和移除按钮。
     let htmlString = items.map((item, index) => {
         total += item.price * item.count;
         itemCount += item.count;
         const matchedGood = goods.find(g => g.name === item.name);
-        const itemIntro = matchedGood ? matchedGood.intro : '暂无简介'; 
-    
+        const itemIntro = matchedGood ? matchedGood.intro : '暂无简介';
+        // 生成购物车项的HTML字符串，并将其插入到页面中
         return `
             <div class="cart-item">
                 <img src="${matchedGood?.imgSrc}" alt="${item.name}" class="item-img">
@@ -162,6 +176,7 @@ function renderCart(): void {
         `;
     }).join('');
 
+    // 计算总价和商品总数，并生成结算按钮的 HTML 字符串
     htmlString += `
         <div class="cart-summary">
             <div>商品总数: ${itemCount}</div>
@@ -170,8 +185,11 @@ function renderCart(): void {
         </div>
     `;
 
+    // 渲染购物车列表
+    // 将生成的 HTML 字符串插入到 cartList 元素中，从而在页面上显示购物车内容
     cartList.innerHTML = htmlString;
 
+    // 为每个移除按钮绑定点击事件，点击时移除对应商品并重新渲染购物车
     items.forEach((_, index) => {
         const removeButton = document.getElementById(`remove-item-btn-${index}`);
         if (removeButton) {
@@ -182,6 +200,7 @@ function renderCart(): void {
         }
     });
 
+    // 为结算按钮绑定点击事件，点击时显示结算成功提示，清空购物车并重新渲染购物车
     const checkoutButton = document.getElementById('checkout-btn');
     if (checkoutButton) {
         checkoutButton.addEventListener('click', () => {
@@ -191,11 +210,21 @@ function renderCart(): void {
         });
     }
 }
+
+// 页面加载完成后渲染购物车
 renderCart();
 
+// 导出相关函数
 export {
     getItemList,
     addItem,
     removeItem,
     removeAll,
 };
+
+/*
+  这段代码实现了一个简单的购物车页面，主要功能包括：
+  商品列表的展示、购物车的管理以及购物车页面的渲染。
+  通过 localStorage 存储购物车数据，实现了添加、移除商品和清空购物车的功能，
+  并在页面加载完成后渲染购物车页面。
+*/

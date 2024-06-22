@@ -1,12 +1,17 @@
+// 商品搜索页面
+
+// 导入样式文件
 import "./style.css"
 
-// 商品数据
+// 商品接口
 interface Goods {
     imgSrc: string;
     name: string;
     price: string;
     intro: string;
 }
+
+// 商品列表
 const goods: Goods[] = [
     {
         imgSrc: './pic/1.png',
@@ -100,13 +105,20 @@ const goods: Goods[] = [
     }
 ];
 
+// 根据传入的 filteredGoods 数组渲染商品列表
+// filteredGoods 是一个 Goods 类型的数组，表示过滤后的商品列表
 function renderGoods(filteredGoods: Goods[]) {
     const resultNone = document.getElementById('result-none');
     const resultList = document.getElementById('result-list');
 
+    // 如果 filteredGoods 数组中有商品（即 filteredGoods.length > 0），
+    // 则隐藏 result-none 元素（通常用于显示“没有找到商品”的提示），
+    // 并生成商品列表的 HTML 字符串，插入到 result-list 元素中。
     if (filteredGoods.length > 0) {
         if (resultNone) resultNone.style.display = 'none';
         if (resultList) {
+            // map 方法遍历 filteredGoods 数组，生成商品列表的 HTML 字符串，
+            // 并使用 join 方法将其拼接成一个字符串，插入到 result-list 元素中
             resultList.innerHTML = filteredGoods.map(item => `
                 <div class="goods">
                     <div>
@@ -118,20 +130,29 @@ function renderGoods(filteredGoods: Goods[]) {
                 </div>
             `).join("");
         }
-    } else {
+    } 
+    // 如果 filteredGoods 数组中没有商品，则显示 result-none 元素，并清空 result-list 元素的内容
+    else {
         if (resultNone) resultNone.style.display = 'block';
         if (resultList) resultList.innerHTML = '';
     }
 }
 
+// 搜索商品
+// 根据搜索关键词过滤商品列表，并调用 renderGoods 函数渲染过滤后的商品列表。
 function searchGoods(keyword: string) {
+    // 使用 filter 方法过滤 goods 数组，找出名称或简介中包含 keyword 的商品。
     const filteredGoods = goods.filter(item =>
         item.name.includes(keyword) || item.intro.includes(keyword)
     );
+    // 调用 renderGoods 函数，传入过滤后的商品列表 filteredGoods。
     renderGoods(filteredGoods);
 }
 
+// 监听搜索框输入
 window.onload = () => {
+    // 页面加载完成后，从 localStorage 中获取 searchKeyword。
+    // 如果 searchKeyword 存在，则调用 searchGoods 函数进行搜索
     const keyword = localStorage.getItem('searchKeyword');
     if (keyword) {
         searchGoods(keyword);
@@ -140,3 +161,9 @@ window.onload = () => {
 };
 
 export { };
+
+/*  
+  这段代码主要实现了：商品列表的渲染和搜索功能。
+  通过监听页面加载事件，从 localStorage 中获取搜索关键词并执行搜索，
+  并通过 searchGoods 函数实现商品搜索。
+*/

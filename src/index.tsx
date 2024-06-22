@@ -1,6 +1,9 @@
+// 首页
+
+// 引入样式文件 
 import "./style.css"
 
-//渲染商品列表
+// 商品接口
 interface Goods {
     imgSrc: string;
     name: string;
@@ -8,6 +11,7 @@ interface Goods {
     intro:string;
 }
 
+// 商品列表
 const goods: Goods[] = [
     {
         imgSrc: './pic/1.png',
@@ -101,7 +105,10 @@ const goods: Goods[] = [
     }
 ];
 
+// 定义了一个 search 函数，用于获取搜索框中的关键字，
+// 并将关键字存储到 localStorage 中，然后跳转到搜索结果页面。
 function search() {
+    // 获取搜索关键字
     const keyword = (document.getElementById('search-input') as HTMLInputElement).value;
     if (keyword) {
         localStorage.setItem('searchKeyword', keyword);
@@ -110,7 +117,7 @@ function search() {
 }
 (window as any).search = search;
 
-
+// 定义了一个 createGoodsHtml 函数，用于生成单个商品的 HTML 字符串
 function createGoodsHtml(goods: Goods, index: number): string {
     return `
         <div class="goods">
@@ -125,6 +132,7 @@ function createGoodsHtml(goods: Goods, index: number): string {
     `;
 }
 
+// 定义了一个 renderGoods 函数，用于将商品列表渲染到页面上，并调用 addEventListeners 函数添加事件监听器
 function renderGoods(goods: Goods[]): void {
     const goodsList = document.getElementById('goods-list');
     if (goodsList) {
@@ -133,8 +141,10 @@ function renderGoods(goods: Goods[]): void {
     }
 }
 
+// 定义了一个 addEventListeners 函数，用于为每个商品的“商品详情”和“加入购物车”按钮添加点击事件监听器
 function addEventListeners() {
     goods.forEach((_, index) => {
+        // 商品详情页按钮
         const detailButton = document.getElementById(`detail-btn-${index}`);
         const addCartButton = document.getElementById(`add-cart-btn-${index}`);
 
@@ -144,7 +154,7 @@ function addEventListeners() {
                 window.location.href = 'detail.html?name=' + encodeURIComponent(name);
             });
         }
-
+        // 加入购物车按钮
         if (addCartButton) {
             addCartButton.addEventListener('click', () => {
                 const name = goods[index].name;
@@ -158,6 +168,7 @@ function addEventListeners() {
     });
 }
 
+// 定义了一个 addItem 函数，用于将商品添加到购物车中，如果购物车中已有同名商品，则增加其数量。
 function addItem(item: { name: string, price: number, count: number }) {
     let arr = getItemList();
     let fi = arr.find((i) => i.name === item.name);
@@ -169,6 +180,7 @@ function addItem(item: { name: string, price: number, count: number }) {
     localStorage.setItem('shopping', JSON.stringify(arr));
 }
 
+// 定义了一个 getItemList 函数，用于从 localStorage 中获取购物车数据。
 function getItemList(): { name: string, price: number, count: number }[] {
     let data = localStorage.getItem('shopping');
     if (data == null) {
@@ -177,8 +189,14 @@ function getItemList(): { name: string, price: number, count: number }[] {
     return JSON.parse(data);
 }
 
+// 页面渲染
 renderGoods(goods);
 
 export { 
     getItemList 
 };
+
+/*
+  这段代码实现了一个简单的电子商务网站首页，包括商品展示、搜索功能、商品详情页跳转和加入购物车功能。
+  通过使用 localStorage 存储购物车数据，实现了基本的购物车管理功能。
+*/
