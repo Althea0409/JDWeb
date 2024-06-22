@@ -128,7 +128,7 @@ function renderProductDetail(product: Goods): void {
             </div>
         `;
     } else {
-        console.error('Product detail element not found');
+        console.error('未找到商品详情元素');
     }
 }
 
@@ -146,12 +146,9 @@ function addToCart(product: Goods): void {
     alert('商品已加入购物车');
 }
 
-// 监听DOMContentLoaded事件，当页面加载完成后执行以下操作：
-// 1. 获取商品名称
-// 2. 从商品列表中查找商品
-// 3. 渲染商品详情
-// 4. 绑定返回首页按钮的点击事件
-// 5. 绑定加入购物车按钮的点击事件
+// 监听DOMContentLoaded事件
+// 实现了在页面加载完成后自动获取商品信息并渲染商品详情
+// 同时为关键按钮添加点击事件处理程序，确保用户可以方便地查看商品详情和将商品添加到购物车。
 document.addEventListener('DOMContentLoaded', () => {
     const productName = getProductNameFromUrl();
     if (productName) {
